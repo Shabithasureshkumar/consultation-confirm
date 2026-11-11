@@ -23,6 +23,7 @@ import { PrescriptionCard } from './components/Dashboard/PrescriptionCard';
 import { LabOrdersCard } from './components/Dashboard/LabOrdersCard';
 import { NextStepsSection } from './components/Dashboard/NextStepsSection';
 import { BottomActions } from './components/Dashboard/BottomActions';
+import { DesignReviewSection } from './components/Dashboard/DesignReviewSection';
 
 import { PrescriptionModal } from './components/Modals/PrescriptionModal';
 import { LabScheduleModal } from './components/Modals/LabScheduleModal';
@@ -188,6 +189,9 @@ export function App() {
               steps={nextSteps}
               onSelectStep={(step) => setSelectedNextStep(step)}
             />
+
+            {/* Consultation Feedback */}
+            <DesignReviewSection onSubmitted={showToast} />
 
             {/* Bottom Actions */}
             <BottomActions
